@@ -1,5 +1,9 @@
 from funciones_listas import *
+from data_info import nombres, generos
+from listas_paralelas import *
 
+
+'''
 
 TAM = 3
 
@@ -75,4 +79,6 @@ for _ in range(TAM):
     promedios.append(calcular_promedioab(notas_p1[-1], notas_p2[-1]))
 
 print(notas_p1)
-mostrar_alumnos(legajos, nombres, generos, notas_p1, notas_p2, promedios)
+'''
+
+cargar_alumnos(legajos, nombres, generos, notes_p1, notes_p2, proms, cantidad)

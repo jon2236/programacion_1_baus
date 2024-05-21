@@ -194,7 +194,7 @@ def promediar_listas(lista_a:list, lista_b:list, lista_promedios:list) -> None:
 def cargar_legajos_lista(lista:list, cantidad:int) -> None:
     legajo_min = 20000
     legajo_max = 30000
-    for i in range(cantidad):
+    for _ in range(cantidad):
         legajo = randint(legajo_min, legajo_max)
         while entero_in_lista(lista, legajo):
             legajo = randint(legajo_min, legajo_max)
