@@ -1,4 +1,4 @@
-from funciones.operaciones import *
+from calculos_funciones.operaciones import *
 
 
 flag_num1 = False

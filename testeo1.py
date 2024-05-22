@@ -1,6 +1,22 @@
-from funciones_listas import *
-from data_info import nombres, generos
-from listas_paralelas import *
+from def_listas.funciones_listas import *
+from def_listas.data_info import nombres, generos
+from def_listas.listas_paralelass import *
+from random import randint
+
+
+TAM = 10
+legajos = []
+nombres = []
+generos = []
+notas_p1 = []
+notas_p2 = []
+promedios = []
+
+
+
+
+cargar_alumnos(legajos, nombres, generos, notas_p1, notas_p2, promedios, TAM)
+mostrar_alumnos(legajos, nombres, generos, notas_p1, notas_p2, promedios)
 
 
 '''
@@ -81,4 +97,4 @@ for _ in range(TAM):
 print(notas_p1)
 '''
 
-cargar_alumnos(legajos, nombres, generos, notes_p1, notes_p2, proms, cantidad)
+
