@@ -6,19 +6,16 @@ def mostrar_lista(lista:list) -> None:
     print()
 
 
-
 def validar_lista(lista:list) -> bool:
     if isinstance(lista, list):
         raise TypeError("se esperaba una lista")
     return True
 
 
-
 def cargar_lista_random(lista:list, size:int, desde:int, hasta:int) -> None:
     from random import randint
     for _ in range(size):
         lista.append(randint(desde, hasta))
-
 
 
 def crear_lista_enteros(size:int, min:int, max:int) -> list:
@@ -29,13 +26,11 @@ def crear_lista_enteros(size:int, min:int, max:int) -> list:
     return lista
 
 
-
 def totalizar_lista(lista:list) -> int:
     total = 0
     for valor in (lista):
         total += valor
     return total
-
 
 
 def calcular_promedio(lista:list) -> float:
@@ -44,12 +39,10 @@ def calcular_promedio(lista:list) -> float:
         if suma == 0:
             raise ValueError("no esta definido el promedio de una lista vacia")
         return totalizar_lista(lista) / suma
-
-
+    
 
 def calcular_promedioab(a:int, b:int) -> float:
     return (a + b) / 2
-
 
 
 def calcular_mayor(lista:list) -> int:
@@ -65,7 +58,6 @@ def calcular_mayor(lista:list) -> int:
     return num_mayor
 
 
-
 def calcular_menor(lista:list) -> int:
     if isinstance(lista, list):
         cant = len(lista)
@@ -79,7 +71,6 @@ def calcular_menor(lista:list) -> int:
     return num_menor
 
 
-
 def entero_in_lista(lista: list, target:int) -> bool:
     entero = False
     for el in lista:
@@ -87,7 +78,6 @@ def entero_in_lista(lista: list, target:int) -> bool:
             entero = True
             break
     return entero
-
 
 
 def numeros_pares(lista: list) -> list:
@@ -99,7 +89,6 @@ def numeros_pares(lista: list) -> list:
     return pares
 
 
-
 def buscar_en_lista(lista:list, target:int) -> int:
     indice = -1
     for i in range(len(lista)):
@@ -109,14 +98,12 @@ def buscar_en_lista(lista:list, target:int) -> int:
     return indice
 
 
-
 def contar_en_lista(lista:list, target:int) -> int:
     contador = 0
     for elem in lista:
         if elem == target:
             contador += 1
     return contador
-
 
 
 def ordenar_lista_ascendente(lista:list) -> None:
@@ -129,7 +116,6 @@ def ordenar_lista_ascendente(lista:list) -> None:
                 lista[j] = aux
 
 
-
 def ordenar_lista_descendente(lista:list) -> None:
     size = len(lista)
     for i in range(size - 1):
@@ -138,7 +124,6 @@ def ordenar_lista_descendente(lista:list) -> None:
                 aux = lista[i]
                 lista[i] = lista[j]
                 lista[j] = aux
-
 
 
 def ordenador_listas(lista:list, ascendente:bool = True) -> None:
@@ -162,11 +147,11 @@ def ordenador_listas(lista:list, ascendente:bool = True) -> None:
                     lista[j] = aux
 
 
-
 def swap_lista(lista:list, i:int, j:int) -> None:
     aux = lista[i]
     lista[i] = lista[j]
     lista[j] = aux
+
 
 
 
@@ -195,7 +180,6 @@ def validar_legajo(min_leg:int, max_leg:int, lista:list):
             print("ERROR: La entrada no es un número entero")
 
 
-
 def validar_nombre(min_caract:int, max_caract:int, lista:list):
     """_summary_
     esto es una funcion q validad nombres
@@ -220,7 +204,6 @@ def validar_nombre(min_caract:int, max_caract:int, lista:list):
             print("error, el nombre no puede tener numeros. Re ingrese su nombre con no menos de 3 letras y no mas de 15")
 
 
-
 def validar_genero(lista:list):
     while True:
         aux = input("ingrese genero: M or F. ").lower()
@@ -229,8 +212,6 @@ def validar_genero(lista:list):
             break
         else:
             print("error: la entrada debe ser f or m")
-
-
 
 def validar_notas(nota_max:int, nota_min:int,  nro_parcial:int, lista:list):
     while True:
@@ -246,11 +227,9 @@ def validar_notas(nota_max:int, nota_min:int,  nro_parcial:int, lista:list):
             print("error: se esperaba un numero")
 
 
-
 def promediar_notas_alumnos(valor_a:int, valor_b:int, lista_promedios:list) -> None:
     promedio = calcular_promedioab(valor_a, valor_b)
     lista_promedios.append(promedio)
-
 
 
 def cargar_alumno_nuevo(lista:list, TAM):
