@@ -1,5 +1,5 @@
-from alumnos_lista.funciones_listas_alumnos import *
-from def_listas.data_info import nombres, generos
+from funciones_listas_dicc import *
+from date_warehouse import *
 from random import randint
 
 

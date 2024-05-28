@@ -1,9 +1,17 @@
-from alumnos_lista.funciones_listas_alumnos import *
-from alumnos_lista.listas_paralelass_alumnos import *
+from listas_paralelass_dicc import *
+from funciones_listas_dicc import *
 
-TAM = 2
+TAM = 1
 alumnos = []
 
-cargar_alumnos(alumnos, TAM)
-cargar_alumno_nuevo(alumnos, TAM)
+for _ in range(TAM):
+    alumno = []
+    validar_legajo(20000, 30000, alumno)
+    validar_nombre(3, 15, alumno)
+    validar_genero(alumno)
+    validar_notas(10, 0, 1, alumno)
+    validar_notas(10, 0, 2, alumno)
+    promediar_notas_alumnos(alumno[3], alumno[4], alumno)
+    print(alumno)
+    alumnos.append(alumno)
 mostrar_alumnos(alumnos)
