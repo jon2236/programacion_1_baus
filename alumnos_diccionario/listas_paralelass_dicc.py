@@ -42,6 +42,22 @@ def definir_campo_alumno(campo:str) -> int:
 
 
 
+def ordenar_alumnos_doble_criterio(alumnos:list):
+    tam = len(alumnos)
+    for i in range(tam - 1):
+        for j in range(i + 1, tam):
+            if alumnos[i][GENERO] == alumnos[j][GENERO]:
+                if alumnos[i][LEGAJO] > alumnos[j][LEGAJO]:
+                    swap_lista(alumnos, i, j)
+                    
+
+            elif alumnos[i][GENERO] > alumnos[j][GENERO]:
+                swap_lista(alumnos, i, j)
+
+
+
+
+
 def ordenar_alumnos(alumnos:list, campo:str = "l", asc:bool = True):
     atributo = definir_campo_alumno(campo)
     tam = len(alumnos)
