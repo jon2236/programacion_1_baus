@@ -196,8 +196,7 @@ def validar_nombre(min_caract:int, max_caract:int, lista:list):
         aux = input("ingrese nombre: ")
         if aux.isalpha():
             if len(aux) > min_caract and len(aux) <= max_caract:
-                lista.append(aux)
-                return
+                return aux
             else:
                 print("ERROR: caracteres fuera de parametros, re ingrese su nombre con mas de tres letras y menos de 15")
         else:

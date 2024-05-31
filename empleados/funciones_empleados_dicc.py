@@ -155,7 +155,7 @@ def swap_lista(lista:list, i:int, j:int) -> None:
 
 
 
-def validar_legajo(min_leg:int, max_leg:int, lista:list):
+def validar_legajo(min_leg:int, max_leg:int, legajo:int, lista:list):
     """_summary_
     esta funcion genera legajos
 
@@ -167,17 +167,23 @@ def validar_legajo(min_leg:int, max_leg:int, lista:list):
         lista (list): _description_
         lista destino
     """
-    while True:
-        aux = input("ingrese legajo, entre 20.000 y 30.000 inclusive")
-        if aux.isdigit():
-            aux = int(aux)
-            if aux >= min_leg and aux <= max_leg:
-                lista.append(aux)
-                break
-            else:
-                print("ERROR: El legajo debe estar entre 20000 y 30000 inclusive")
+    if legajo == None and legajo == "" and legajo == 0:
+        while True:
+            aux = input("ingrese legajo, entre 20.000 y 30.000 inclusive")
+            for i in range(len(lista)):
+                if lista[i]["legajo"] != aux and aux.isdigit():
+                    aux = int(aux)
+                    if aux >= min_leg and aux <= max_leg:
+                        return aux
+                    else:
+                        print("ERROR: El legajo debe estar entre 20000 y 30000 inclusive")
+                else:
+                    print("ERROR: El legajo ya existe")
+    else:
+        if legajo >= min_leg and legajo <= max_leg:
+            return legajo
         else:
-            print("ERROR: La entrada no es un número entero")
+            print("ERROR: El legajo debe estar entre 20000 y 30000 inclusive")
 
 
 def validar_nombre(min_caract:int, max_caract:int, lista:list):
