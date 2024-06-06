@@ -1,8 +1,25 @@
 from funciones_empleados_paralelas import *
-tam = 1
-test = []
-cargar_empleados(test,10)
-mostrar_empleados(test)
+
+
+
+numeros = [3, 45, 2, 66, 10, 30, 42, 66]
+
+
+
+x = filtra_lista(lambda numero : numero % 2 != 0, numeros)
+print(x)
+
+
+
+
+
+
+
+
+# tam = 1
+# test = []
+# cargar_empleados(test,10)
+# mostrar_empleados(test)
 
 # def cargar_lista_manual(lista:list, tam:int):
 #     for _ in range(tam):

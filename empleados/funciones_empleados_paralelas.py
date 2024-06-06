@@ -92,3 +92,33 @@ def cargar_legajos_lista(lista:list, cantidad:int) -> None:
         while entero_in_lista(lista, legajo):
             legajo = randint(legajo_min, legajo_max)
         lista.append(legajo)
+
+
+#//////////////////////////////////////////////////////////////programacion funcional////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+def mapear_lista(procesadora, lista:list) -> list:
+    lista_retorno = []
+    for el in lista:
+        lista_retorno.append(procesadora(el))
+    return lista_retorno
+
+
+def filtra_lista(filtradora, lista: list) -> list:
+    lista_filtrada = []
+    for el in lista:
+        if filtradora(el):
+            lista_filtrada.append(el)
+    return lista_filtrada
+
+
+def for_each_lista(funcion, lista:list) -> None:
+    for i in range(len(lista)):
+        lista[i] = funcion(lista[i])
+
+
+def get_path_actual(nombre_archivo):
+    import os
+    directorio_actual = os.path.dirname(__file__)
+    return os.path.join(directorio_actual, nombre_archivo)
